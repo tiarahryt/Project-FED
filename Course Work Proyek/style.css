@@ -1,0 +1,399 @@
+/* Hero Section */
+.hero {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content higher */
+    align-items: center;
+    padding-top: 20vh; /* Adds space from the top */
+    background: url('Toronto Background new.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Bigger font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow */
+}
+
+.hero p {
+    font-size: 1.5rem; /* Slightly larger text for description */
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #e0e0e0; /* Softer white */
+}
+
+.hero .buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.hero .buttons a {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff; /* Button color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hero .buttons a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/*----------------------------------------------------------------------------------*/
+
+/* About Me Section */
+.about-me-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 20px 40px;
+    gap: 30px; /* Space between text box and image */
+}
+
+.about-me-text {
+    background-color: #000; /* Black background for text box */
+    color: #fff; /* White text */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px;
+    flex: 1; /* Ensures box takes up space equally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.about-me-text h2 {
+    font-size: 24px;
+    color: #58a6ff; /* Soft blue for heading */
+    margin-bottom: 10px;
+    border-bottom: 2px solid #58a6ff; /* Divider under heading */
+    padding-bottom: 5px;
+}
+
+.about-me-text p {
+    font-size: 16px;
+    line-height: 1.6; /* Improve readability */
+    margin-bottom: 15px;
+}
+
+.about-me-image {
+    flex: 1; /* Ensures equal space with text box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-me-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+/* Recent Projects Section */
+#recent-projects {
+    padding: 50px 5%;
+    text-align: center;
+    background-color: #121212; /* Dark background */
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px), 
+                      radial-gradient(circle, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+    background-position: 25px 25px, 0 0; /* Creates hexagon pattern effect */
+}
+
+/* Recent Projects Title Styling */
+#recent-projects h2 {
+    font-size: 36px;
+    color: #00aaff; /* Soft blue for title */
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+    position: relative; /* Required for the underline styling */
+}
+
+#recent-projects h2::after {
+    content: "";
+    display: block;
+    width: 100px; /* Length of the underline */
+    height: 4px; /* Thickness of the underline */
+    background-color: #00aaff; /* Blue underline */
+    margin: 10px auto 0 auto;
+    border-radius: 2px; /* Rounded edges for underline */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for the underline */
+}
+
+/* Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
+    gap: 20px; /* Space between boxes */
+    justify-items: center;
+    align-items: start;
+    padding: 0; /* Remove extra padding around the grid */
+}
+
+/* Project Box Styling */
+.project-box {
+    display: flex; /* Align content horizontally */
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    width: 90%; /* Adjusted width */
+    max-width: 320px; /* Limit box width */
+    aspect-ratio: 1 / 1; /* Ensures height is equal to width */
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-box:hover {
+    transform: translateY(-5px) scale(1.02); /* Subtle hover effect */
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Text Section */
+.project-details {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00aaff; /* Blue text for titles */
+    margin-bottom: 8px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle text shadow */
+}
+
+.project-description {
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.5;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Section */
+.project-box img {
+    width: 80px; /* Adjusted image size */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Slight rounded corners */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border for image */
+}
+
+/*-------------------------------------------------------------------*/
+
+/* Experience Section */
+.experience-section {
+    background-color: #1c1c1c; /* Dark gray background */
+    color: #fff; /* White text for readability */
+    padding: 50px 0;
+}
+
+/* Section Title */
+.experience-section h2 {
+    font-size: 32px;
+    color: #3498db;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+}
+
+/* Experience Container */
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Experience Box */
+.experience-box {
+    display: flex;
+    align-items: center;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.experience-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Text Content */
+.experience-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.experience-text h3 {
+    font-size: 20px;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.experience-text h4 {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 10px;
+}
+
+.experience-text p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Image Content */
+.experience-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.experience-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*----------------------------------------------------------------*/
+
+/* Coursework Section */
+.coursework {
+    padding: 60px 20px; /* Padding for spacing */
+    background-color: #111; /* Dark background for consistency */
+    color: #e0e0e0; /* Light text for contrast */
+    text-align: center;
+}
+
+.coursework h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #4ba3f2; /* Blue for the section title */
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Section title in uppercase */
+    border-bottom: 2px solid #4ba3f2; /* Adds an underline effect */
+    display: inline-block;
+    padding-bottom: 10px; /* Space below the text before underline */
+}
+
+.coursework ul {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    max-width: 800px; /* Limit width for better readability */
+    margin: 0 auto; /* Center align the list */
+    text-align: left; /* Align list items to the left */
+}
+
+.coursework li {
+    font-size: 1.2rem; /* Slightly larger font size for list items */
+    margin-bottom: 15px; /* Space between list items */
+    background-color: #222; /* Subtle background for each item */
+    padding: 10px 15px; /* Padding inside each list item */
+    border-radius: 8px; /* Rounded corners for a modern look */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.coursework li:hover {
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow effect on hover */
+}
+
+.coursework li::before {
+    content: "• "; /* Add a bullet point manually */
+    color: #4ba3f2; /* Blue bullet point */
+    font-size: 1.5rem; /* Larger size for bullet */
+    vertical-align: middle; /* Align bullet vertically */
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/* Hero Section Background */
+#hero {
+    position: relative;
+    background: url('Toronto Background.htm') no-repeat center center fixed; 
+    background-size: cover; /* Make the background cover the section */
+    color: #fff; /* White text for better contrast */
+    text-align: center;
+    padding: 100px 20px; /* Adjust height of the section */
+    height: 600px; /* Set a fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay for readability */
+#hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+/* Hero Content */
+#hero h1, #hero p, #hero a {
+    position: relative;
+    z-index: 2; /* Ensure text appears above the overlay */
+    margin: 10px 0;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+#hero a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+}
+
+#hero a.btn:hover {
+    background: #fff;
+    color: #333;
+}
+
+/*-----------------------------------------------------*/
+
+/* Remove default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}

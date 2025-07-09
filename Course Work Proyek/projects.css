@@ -1,0 +1,122 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #121212; /* Dark theme background */
+    color: #e0e0e0; /* Light text color */
+    line-height: 1.6;
+}
+
+/* Projects Section Container */
+.projects-container {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.projects-container h2 {
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Project Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Spacing between grid items */
+    margin-top: 20px;
+}
+
+/* Individual Project Box */
+.project-box {
+    display: flex;
+    flex-direction: column;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.6);
+}
+
+/* Project Content */
+.project-content {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    color: #00aaff;
+    margin-bottom: 10px;
+}
+
+.project-content p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #d0d0d0;
+}
+
+.project-content strong {
+    color: #00aaff;
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures image fits without distortion */
+    background-color: #333; /* Placeholder color if image is missing */
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    border-top: 2px solid #00aaff;
+}
+
+footer p:nth-child(2) {
+    font-style: italic;
+    color: #00aaff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-container {
+        padding: 15px;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-content p {
+        font-size: 0.9rem;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+}

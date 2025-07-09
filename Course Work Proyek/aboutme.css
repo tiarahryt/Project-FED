@@ -1,0 +1,110 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cambria', serif;
+    background-color: #121212; /* Dark background for contrast */
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* Main Content Container */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* About Me Section */
+.about-intro {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.about-photo img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    border: 4px solid #00aaff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-summary h2 {
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.about-summary p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #d0d0d0;
+}
+
+/* Shared Section Styles */
+.skills, .design-teams, .extracurriculars, .awards {
+    margin-bottom: 40px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.skills h2, .design-teams h2, .extracurriculars h2, .awards h2 {
+    font-size: 2rem;
+    color: #00aaff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.skills-list, ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li, .design-teams li, .extracurriculars li, .awards li {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+/* Custom Bullets */
+.skills-list li::before, ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #00aaff;
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+    border-top: 2px solid #00aaff;
+}
+
+footer p:nth-child(2) {
+    font-style: italic;
+    color: #00aaff;
+}

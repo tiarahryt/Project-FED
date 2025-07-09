@@ -1,0 +1,109 @@
+/* Contact Section */
+.contact-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #1f1f1f; /* Dark card background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #e0e0e0;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #00aaff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #00aaff;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.contact-form label {
+    text-align: left;
+    font-size: 1.1rem;
+    color: #d0d0d0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #00aaff;
+    box-shadow: 0 0 5px rgba(0, 170, 255, 0.6);
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #00aaff;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button:hover {
+    background-color: #0077cc;
+    transform: scale(1.05);
+}
+
+/* LinkedIn Contact Info */
+.contact-links {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #d0d0d0;
+}
+
+.contact-links a {
+    color: #00aaff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-links a:hover {
+    color: #0077cc;
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+    }
+
+    .contact-form button {
+        font-size: 0.9rem;
+    }
+}
