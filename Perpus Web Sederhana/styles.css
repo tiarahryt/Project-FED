@@ -1,0 +1,244 @@
+/* Reset dasar untuk menghilangkan margin dan padding */
+html,
+body {
+  height: 100%; /* Pastikan html dan body memiliki tinggi 100% */
+  margin: 0; /* Menghilangkan margin default */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex; /* Menggunakan flexbox untuk layout */
+  flex-direction: column; /* Mengatur arah flex menjadi kolom */
+}
+
+header {
+  background: linear-gradient(135deg, #6439ff, #4f75ff); /* Gradiasi warna */
+  color: white;
+  padding: 10px 20px; /* Padding untuk header */
+}
+
+nav {
+  display: flex; /* Menampilkan navbar */
+  justify-content: center; /* Meratakan elemen secara horizontal */
+  align-items: center; /* Menyelaraskan item secara vertikal */
+}
+
+.logo img {
+  height: 70px; /* Atur tinggi logo sesuai kebutuhan */
+}
+
+#nav-links {
+  list-style: none; /* Menghilangkan bullet points */
+  padding: 0; /* Menghilangkan padding */
+  margin: 0; /* Menghilangkan margin */
+  display: flex; /* Menampilkan link secara horizontal */
+}
+
+#nav-links li {
+  margin-left: 20px; /* Jarak antar link */
+}
+
+#nav-links a {
+  text-decoration: none; /* Menghilangkan garis bawah */
+  color: white; /* Warna teks link */
+}
+
+/* Gaya untuk konten utama */
+main {
+  flex: 1; /* Membuat main mengambil sisa ruang yang tersedia */
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #00ccdd,
+    #7cf5ff
+  ); /* Gradiasi dari warna dominan kedua ke keempat */
+  border-radius: 8px; /* Menambahkan sudut melengkung */
+  display: flex; /* Menggunakan flexbox untuk layout */
+  flex-direction: column; /* Mengatur arah flex menjadi kolom */
+  align-items: center; /* Menyelaraskan konten secara vertikal */
+  text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.card {
+  background-color: white; /* Warna latar belakang card */
+  border-radius: 10px; /* Sudut melengkung */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+  padding: 20px; /* Padding di dalam card */
+  width: 300px; /* Lebar card */
+  margin-top: 20px; /* Margin atas untuk jarak dengan judul */
+}
+
+.input-group {
+  margin-bottom: 15px; /* Margin bawah untuk setiap grup input */
+}
+
+.input-group label {
+  display: block; /* Menampilkan label sebagai blok */
+  margin-bottom: 5px; /* Margin bawah untuk label */
+  font-weight: bold; /* Menebalkan teks label */
+}
+
+.input-group input,
+.input-group select {
+  width: 100%; /* Lebar input dan select 100% */
+  padding: 10px; /* Padding di dalam input */
+  border: 1px solid #ccc; /* Border abu-abu */
+  border-radius: 5px; /* Sudut melengkung */
+  box-sizing: border-box; /* Menghitung padding dan border dalam lebar total */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: #6439ff; /* Warna border saat fokus */
+  outline: none; /* Menghilangkan outline default */
+}
+
+button {
+  background-color: #6439ff; /* Warna latar belakang tombol */
+  color: white; /* Warna teks tombol */
+  border: none; /* Menghilangkan border default */
+  padding: 10px 15px; /* Padding di dalam tombol */
+  border-radius: 5px; /* Sudut melengkung */
+  cursor: pointer; /* Menunjukkan kursor pointer saat hover */
+  font-size: 16px; /* Ukuran font tombol */
+}
+
+button:hover {
+  background-color: #4f75ff; /* Warna latar belakang saat hover */
+}
+
+footer {
+  background: linear-gradient(
+    135deg,
+    #4f75ff,
+    #6439ff
+  ); /* Gradiasi dari warna dominan kedua ke pertama */
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0; /* Menempatkan footer di bagian bawah */
+  width: 100%; /* Lebar footer 100% */
+}
+
+/* Media Query untuk responsivitas */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Mengatur navbar menjadi kolom pada layar kecil */
+    align-items: center; /* Menyelaraskan item secara horizontal */
+  }
+
+  #nav-links {
+    flex-direction: column; /* Mengatur link menjadi kolom */
+    margin-top: 10px; /* Jarak atas untuk link */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Jarak bawah untuk logo */
+  }
+
+  main {
+    padding: 10px; /* Mengurangi padding di main untuk layar kecil */
+  }
+
+  .card {
+    width: 90%; /* Lebar card 90% pada layar kecil */
+  }
+}
+
+/* Gaya untuk Alert Kustom */
+.alert {
+  background-color: #4caf50; /* Warna latar belakang alert (hijau) */
+  color: white; /* Warna teks alert */
+  padding: 15px; /* Padding di dalam alert */
+  border-radius: 5px; /* Sudut melengkung */
+  position: fixed; /* Posisi tetap */
+  top: 20px; /* Jarak dari atas */
+  left: 50%; /* Menempatkan di tengah */
+  transform: translateX(-50%); /* Menggeser ke kiri untuk menyeimbangkan */
+  z-index: 1000; /* Menempatkan alert di atas elemen lain */
+  display: flex; /* Menggunakan flexbox untuk layout */
+  justify-content: space-between; /* Menempatkan teks dan tombol di sisi yang berbeda */
+  align-items: center; /* Menyelaraskan item secara vertikal */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+  animation: slideIn 0.5s; /* Animasi saat muncul */
+  transition: opacity 0.5s ease; /* Transisi untuk efek menghilang */
+}
+
+/* Animasi untuk alert */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.alert-content {
+  display: flex; /* Menggunakan flexbox untuk konten alert */
+  align-items: center; /* Menyelaraskan item secara vertikal */
+}
+
+.close-button {
+  background: none; /* Menghilangkan latar belakang */
+  border: none; /* Menghilangkan border */
+  color: white; /* Warna teks tombol */
+  font-size: 20px; /* Ukuran font tombol */
+  margin-left: 15px; /* Jarak antara teks dan tombol */
+  cursor: pointer; /* Menunjukkan kursor pointer saat hover */
+}
+
+.close-button:hover {
+  color: #ffdddd; /* Warna saat hover */
+}
+
+/* Gaya untuk Card Langkah-Langkah */
+.steps-card {
+  background-color: #ffffff; /* Warna latar belakang card */
+  padding: 20px; /* Padding di dalam card */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+  margin-top: 20px; /* Jarak atas untuk memisahkan dari konten lain */
+}
+
+.steps-card h2 {
+  margin-bottom: 15px; /* Jarak bawah untuk judul langkah-langkah */
+  color: #333; /* Warna teks judul */
+}
+
+.steps-card ol {
+  margin-left: 20px; /* Jarak kiri untuk daftar terurut */
+  color: #555; /* Warna teks untuk langkah-langkah */
+}
+
+.steps-card li {
+  margin-bottom: 10px; /* Jarak bawah untuk setiap langkah */
+}
+
+/* Gaya untuk Card Deskripsi Aplikasi */
+.description-card {
+  background-color: #ffffff; /* Warna latar belakang card */
+  padding: 20px; /* Padding di dalam card */
+  border-radius: 8px; /* Sudut melengkung */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+  margin-top: 20px; /* Jarak atas untuk memisahkan dari konten lain */
+}
+
+.description-card h2 {
+  margin-bottom: 10px; /* Jarak bawah untuk judul */
+  color: #333; /* Warna teks judul */
+}
+
+.description-card ul {
+  margin-left: 20px; /* Jarak kiri untuk daftar tidak terurut */
+  color: #555; /* Warna teks untuk langkah-langkah */
+  list-style-type: disc; /* Menggunakan bullet points */
+}
+
+.description-card p {
+  color: #555; /* Warna teks untuk paragraf */
+  margin-bottom: 15px; /* Jarak bawah untuk paragraf */
+}
